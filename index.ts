@@ -1,10 +1,10 @@
 import { spawn } from "node:child_process";
 
-const TIMEOUT = 20000; // 20 seconds
+const TIMEOUT = 60000; // 60 seconds
 
 async function segvRepeater() {
   console.log("🔄 SEGFAULT REPEATER - Running execute.ts repeatedly");
-  console.log("Timeout: 20 seconds per attempt");
+  console.log("Timeout: 60 seconds per attempt");
   console.log("Maximum attempts: 10");
   console.log("========================================");
   
