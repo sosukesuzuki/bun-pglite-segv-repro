@@ -1,9 +1,9 @@
 import { spawn } from "node:child_process";
 
-const TIMEOUT = 60000; // 20 seconds
+const TIMEOUT = 20000; // 20 seconds
 
 async function segvRepeater() {
-  console.log("🔄 SEGFAULT REPEATER - Running ultra-aggressive.ts repeatedly");
+  console.log("🔄 SEGFAULT REPEATER - Running execute.ts repeatedly");
   console.log("Timeout: 20 seconds per attempt");
   console.log("Maximum attempts: 10");
   console.log("========================================");
@@ -71,7 +71,7 @@ async function segvRepeater() {
 
 function runWithTimeout(): Promise<{type: 'segfault' | 'timeout' | 'error', error?: string, stdout?: string, stderr?: string}> {
   return new Promise((resolve) => {
-    const child = spawn('bun', ['run', 'ultra-aggressive.ts'], {
+    const child = spawn('bun', ['run', 'execute.ts'], {
       stdio: ['pipe', 'pipe', 'pipe'],
       cwd: process.cwd()
     });
